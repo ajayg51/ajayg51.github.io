@@ -32,7 +32,7 @@
             </ul>
         </div>
         <input id="searchText" type="text" style="margin-left: 15%;"
-            placeholder="Search Menu Item" onmouseover="this.select();"  />
+            placeholder="Search Menu Item" onmouseover='this.value="";this.select();'/>
         <iframe id="loadPage" style="width:60%;height:80%;background-color:#A9A9A9;margin-left: 20%;border-radius: 10px;border:none;">
         </iframe>
         <noscript>Please Enable Javascript...</noscript>
@@ -48,13 +48,9 @@
             var input=document.getElementById("searchText");
             input.addEventListener("keyup",function(key){
                     if(key.keyCode==13 && input.value!=null){
-                        if(input.value=="about" || input.value=="About")checkTextAbout();
-                        if(input.value=="education" || input.value=="Education")checkTextEducation();
-                       
+                        if(input.value=="about" || input.value=="About"){MenuItemInitial();checkTextAbout();}
+                        if(input.value=="education" || input.value=="Education"){MenuItemInitial();checkTextEducation();}
                     }
-                    if(key.keyCode==8)MenuItemInitial();
-                    
-                        
             });
             function MenuItemInitial(){
                 var a=document.getElementsByClassName("menuitems");
