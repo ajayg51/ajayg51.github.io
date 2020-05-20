@@ -41,8 +41,9 @@
                      return ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)  );
             }
            if(detectMob()==true){
-               document.body.innerHTML="Use Laptop/Desktop to View It...";
+               document.body.innerHTML="Sorry For Inconvenience...";
                document.body.style.backgroundColor="white";
+               alert("Use Laptop/Desktop To View It");
                document.body.style.fontSize="200%";
            }
             var input=document.getElementById("searchText");
@@ -67,10 +68,7 @@
             function checkTextEducation(){
                                 document.getElementById("education").style.color="yellow";
                                 document.getElementById("loadPage").src="Education.html";    
-                                
                         }
-            
-          
         </script>
     </body>
 </html>
