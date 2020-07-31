@@ -1,0 +1,36 @@
+body{
+	padding: 0px;
+	margin:0px;
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+	#menupane{
+	          width:100%;
+	          background-color:grey;
+	          color:aquamarine;
+	          font-size: 150%;
+	          margin: 0px;
+	          padding: 0px;
+	          overflow: hidden;
+			}
+	ul.listStyle li{
+		margin-left: 10px;
+		display: inline;
+	}
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+	#menupane{
+	          width:30%;
+	          background-color:blue;
+	          color:aquamarine;
+	          font-size: 150%;
+	          margin: 0px;
+	          padding: 0px;
+	          overflow: hidden;
+			}
+
+}
