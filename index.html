@@ -18,11 +18,11 @@
 
 <!-- Mobile Section -->
 <div id="menupaneSidebar">
-<button onclick="DispSidebar()">
-		<img src="ListMob.png" width="100px" height="100px">
+<button id="ListMobButon" onclick="DispSidebar()" style="cursor: pointer;">
+		<img src="images/ListMob.png" width="30px" height="30px">
 </button>
 	<div id="menupane-non-desktop">
-	<img class="close-buton" src="close.png" onclick="CloseSidebar()">
+	<img class="close-buton" src="images/close.png" style="border-radius: 50%;cursor: pointer;" onclick="CloseSidebar()">
     <ul class="listStyle">
         <li id="about">About</li>
         <li id="education">Education</li>
@@ -34,11 +34,13 @@
 <script type="text/javascript">
 	function DispSidebar(){
 		var sidebar=document.getElementById("menupane-non-desktop");
-		sidebar.style.cssText="transform:translate(100%,0);transition:transform 1s linear;position:fixed;";
+		sidebar.style.cssText="display:block;position:fixed;";
+		document.getElementById("ListMobButon").style.display="none";
 	}
 	function CloseSidebar(){
 		var sidebar=document.getElementById("menupane-non-desktop");
-		sidebar.style.cssText="transform:translate(100%,0);transition:transform 1s linear;";
+		sidebar.style.cssText="display:none;";
+		document.getElementById("ListMobButon").style.display="block";
 	}
 
 
