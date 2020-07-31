@@ -4,47 +4,53 @@ body{
 }
 
 /* Desktops and laptops ----------- */
-@media only screen 
-and (min-width : 1224px) {
+@media only screen and (min-width : 1000px) {
 	#menupane{
 	          width:100%;
+	          height: 50px;
 	          background-color:grey;
 	          color:aquamarine;
-	          font-size: 150%;
-	          margin: 0px;
+	          font-size: 30px;
+	          margin-top: 0;
 	          padding: 0px;
 	          overflow: hidden;
 
 			}
+	ul{
+		margin-top: -1px;
+	}
 	ul.listStyle li{
 		margin-left: 10px;
 		display: inline;
 	}
+	#menupaneSidebar{
+		display:none;
+	}
 }
 /*Shown only in Mobile Section*/
-#menupaneSidebar{
-	display:none;
-}
+
 
 /* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 320px) {
-	#menupaneSidebar{
-		display: block;
+@media only screen and (max-width : 1000px) {
+	#menupane{
+		display:none;
 	}
 	#menupane-non-desktop{
-	          width:30%;
-	          background-color:blue;
+	          width:auto;
+	          height:auto;
+	          max-width: 300px;
+	          max-height: 300px;
+	          background-color:grey;
 	          color:aquamarine;
-	          font-size: 150%;
-	          margin: 0px;
+	          font-size: 40px;
 	          padding: 0px;
 	          overflow: hidden;
-	          margin-left:-100%;
 			}
 
 	.close-buton{
 		width:40px;
-		margin-left: 50%;
+		margin-top: 4px; 
+		margin-left: 230px;
 		margin-bottom: 0;
 	}
 
