@@ -4,11 +4,46 @@
 	<link rel="stylesheet" type="text/css" href="abc.css">
 </head>
 <body>
+<!-- 
+<button id="imgbutton" onclick="DispSidebar()">
+		<img src="ListMob.png" width="100px" height="100px">
+</button> 
+-->
 <div id="menupane">
     <ul class="listStyle">
         <li id="about">About</li>
         <li id="education">Education</li>
     </ul>
 </div>
+
+<!-- Mobile Section -->
+<div id="menupaneSidebar">
+<button onclick="DispSidebar()">
+		<img src="ListMob.png" width="100px" height="100px">
+</button>
+	<div id="menupane-non-desktop">
+	<img class="close-buton" src="close.png" onclick="CloseSidebar()">
+    <ul class="listStyle">
+        <li id="about">About</li>
+        <li id="education">Education</li>
+    </ul>
+</div>
+
+
+<!-- Javascript -->
+<script type="text/javascript">
+	function DispSidebar(){
+		var sidebar=document.getElementById("menupane-non-desktop");
+		sidebar.style.cssText="transform:translate(100%,0);transition:transform 1s linear;position:fixed;";
+	}
+	function CloseSidebar(){
+		var sidebar=document.getElementById("menupane-non-desktop");
+		sidebar.style.cssText="transform:translate(100%,0);transition:transform 1s linear;";
+	}
+
+
+</script>
+
+
 </body>
 </html>
