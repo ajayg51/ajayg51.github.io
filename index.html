@@ -1,51 +1,57 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-	<link rel="stylesheet" type="text/css" href="abc.css">
-</head>
-<body>
-<!-- 
-<button id="imgbutton" onclick="DispSidebar()">
-		<img src="ListMob.png" width="100px" height="100px">
-</button> 
--->
-<div id="menupane">
-    <ul class="listStyle">
-        <li id="about">About</li>
-        <li id="education">Education</li>
-    </ul>
-</div>
+body{
+	padding: 0px;
+	margin:0px;
+}
 
-<!-- Mobile Section -->
-<div id="menupaneSidebar">
-<button id="ListMobButon" onclick="DispSidebar()" style="cursor: pointer;">
-		<img src="images/ListMob.png" width="30px" height="30px">
-</button>
-	<div id="menupane-non-desktop">
-	<img class="close-buton" src="images/close.png" style="border-radius: 50%;cursor: pointer;" onclick="CloseSidebar()">
-    <ul class="listStyle">
-        <li id="about">About</li>
-        <li id="education">Education</li>
-    </ul>
-</div>
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1000px) {
+	#menupane{
+	          width:100%;
+	          height: 50px;
+	          background-color:grey;
+	          color:aquamarine;
+	          font-size: 30px;
+	          margin-top: 0;
+	          padding: 0px;
+	          overflow: hidden;
 
-
-<!-- Javascript -->
-<script type="text/javascript">
-	function DispSidebar(){
-		var sidebar=document.getElementById("menupane-non-desktop");
-		sidebar.style.cssText="display:block;position:fixed;";
-		document.getElementById("ListMobButon").style.display="none";
+			}
+	ul{
+		margin-top: -1px;
 	}
-	function CloseSidebar(){
-		var sidebar=document.getElementById("menupane-non-desktop");
-		sidebar.style.cssText="display:none;";
-		document.getElementById("ListMobButon").style.display="block";
+	ul.listStyle li{
+		margin-left: 10px;
+		display: inline;
+	}
+	#menupaneSidebar{
+		display:none;
+	}
+}
+/*Shown only in Mobile Section*/
+
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 1000px) {
+	#menupane{
+		display:none;
+	}
+	#menupane-non-desktop{
+	          width:auto;
+	          height:auto;
+	          max-width: 300px;
+	          max-height: 300px;
+	          background-color:grey;
+	          color:aquamarine;
+	          font-size: 40px;
+	          padding: 0px;
+	          overflow: hidden;
+			}
+
+	.close-buton{
+		width:40px;
+		margin-top: 4px; 
+		margin-left: 230px;
+		margin-bottom: 0;
 	}
 
-
-</script>
-
-
-</body>
-</html>
+}
