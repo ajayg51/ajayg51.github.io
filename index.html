@@ -5,22 +5,22 @@
 </head>
 <body>
 <div id="menupane">
-    <img src="images/HomeLogo.jpeg" style="width:35px;height:35px;border-radius:50%;margin-top:2px;">
+    <img src="images/HomeLogo.jpeg" 
+    style="width:35px;height:35px;border-radius:50%;margin-top:2px;">
 	<ul class="listStyle">
 		<li id="about">About</li>
         <li id="education">Education</li>
     </ul>
 </div>
 
-<!-- Mobile Section -->
+<!------------------------------------------------------- Mobile Section ---------------------------------------------->
 
 <div id="menupaneSidebar">
-<div id="navbar" style="width:100%;height: 40px;background-color:grey;">
-	<img src="images/HomeLogo.jpeg" style="width:35px;height:35px;border-radius:50%;margin:3px 0 0 0;">
+<div id="navbar" style="width:100%;height: 36px;background-color:aqua;">
+	<img src="images/ListMob.jpeg" width="25px" height="30px" style="margin:0;cursor: pointer;" 
+	onclick="DispSidebar();" id="ListMobButon">
+	<img src="images/HomeLogo.jpeg" style="width:35px;height:35px;border-radius:50%;margin:0px 0 0 50%;">
 </div>
-<button id="ListMobButon" onclick="DispSidebar()" style="cursor: pointer;margin:0px 0 0 0px;">
-		<img src="images/ListMob.jpeg" width="30px" height="30px">
-</button>
 	<div id="menupane-non-desktop" style="display:none;">
 	<img class="close-buton" src="images/close.jpeg" style="border-radius: 50%;cursor: pointer;" onclick="CloseSidebar()">
     <ul class="listStyle">
@@ -30,22 +30,22 @@
 </div>
 
 
-<!-- Javascript -->
+<!---------------------------------------------- Javascript For Mobile ---------------------------------------------->
+
 <script type="text/javascript">
 	function DispSidebar(){
 		var sidebar=document.getElementById("menupane-non-desktop");
 		sidebar.style.cssText="display:block;position:fixed;";
-		document.getElementById("ListMobButon").style.display="none";
+		document.getElementById("ListMobButon").style.opacity=0;
 	}
 	function CloseSidebar(){
 		var sidebar=document.getElementById("menupane-non-desktop");
 		sidebar.style.cssText="display:none;";
-		document.getElementById("ListMobButon").style.display="block";
+		document.getElementById("ListMobButon").style.opacity=1;
 	}
-
+	
+//<<-------------------------------------------------------------------------------------------------------------------->>
 
 </script>
-
-
 </body>
 </html>
