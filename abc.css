@@ -52,7 +52,10 @@ body{
 	          font-size: 40px;
 	          padding: 0px;
 	          overflow: hidden;
-			}
+		}
+	ul{
+		list-style-type:none;
+	}
 
 	.close-buton{
 		width:40px;
